@@ -1,7 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 import {
   Card,
   CardAction,
@@ -14,35 +11,48 @@ import {
 import { IllustratedButton } from '@/components/ui/illustrated_button'
 import { useNavigate } from 'react-router'
 
-
+const categoriasParaMostrar = [
+  {
+    id: 1,
+    nombre: "Principio",
+    ruta: "/itmh9b5N",
+  },
+  {
+    id: 2,
+    nombre: "1 año",
+    ruta: "/instrucciones",
+  },
+  
+]
 
 
 function App() {
-  const [count, setCount] = useState(0)
   const navigate = useNavigate()
 
-  const navigateToQ1 = () => {
-    navigate('/q1')
+  const navigateTo = (ruta) => {
+    navigate(ruta)
   }
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Preguntas</CardTitle>
-        <CardDescription>Elegí que pregunta queres responder</CardDescription>
-        {/* <CardAction>Card Action</CardAction> */}
-      </CardHeader>
-      <CardContent>
-        <p>Card Content</p>
-        <IllustratedButton variant='primary' title="Pregunta 1" description="Principio" onClick={navigateToQ1} />
-        <IllustratedButton variant='primary' title="Hello" description="This is an illustrated button" onClick={navigateToQ1} />
-        <IllustratedButton variant='primary' title="Hello" description="This is an illustrated button" onClick={navigateToQ1} />
-        <IllustratedButton variant='primary' title="Hello" description="This is an illustrated button" onClick={navigateToQ1} />
-        <IllustratedButton variant='primary' title="Hello" description="This is an illustrated button" onClick={navigateToQ1} />
-      </CardContent>
-      <CardFooter>
-      </CardFooter>
-    </Card>
+    <main className='flex justify-center bg-zinc-50 p-10'>
+      <Card>
+        <CardHeader>
+          <CardTitle>Elegí la pregunta</CardTitle>
+          <CardDescription>Cada pregunta tiene una categoría</CardDescription>
+          {/* <CardAction>Card Action</CardAction> */}
+        </CardHeader>
+        <CardContent>
+          {/* <IllustratedButton variant='primary' size='sm' title="Pregunta 1" onClick={navigateToQ1} /> */}
+          {
+            categoriasParaMostrar.map((categoria) => (
+              <IllustratedButton key={categoria.id} variant='primary' size='sm' title={categoria.nombre} onClick={() => navigateTo(categoria.ruta)} />
+            ))
+          }
+        </CardContent>
+        <CardFooter>
+        </CardFooter>
+      </Card>
+    </main>
   )
 }
 

@@ -4,7 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-rubik: "Rubik", sans-serif;
+  --font-rubik: "Rubik";
+  --font-chewy: "Chewy";
+  --font-patrick: "Patrick Hand SC";
+  --font-asap: "Asap", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -117,6 +120,6 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-rubik);
+    font-family: var(--font-asap);
   }
 }

@@ -30,10 +30,10 @@ import { ArrowLeftCircle } from "lucide-react"
 
 
 
-const respuestasValidasRaw = ["sanguche", "milanesa", "sandwich"]
+const respuestasValidasRaw = ["vino", "pomelo","tinto"]
 const respuestasValidas = respuestasValidasRaw.map(normalize)
 
-const Principio = () => {
+const Veintiocho = () => {
     const navigate = useNavigate()
     //Traerme state del navigation
     const location = useLocation()
@@ -60,7 +60,7 @@ const Principio = () => {
 
         if (esValida) {
         console.log("✅ Respuesta correcta")
-        navigate('zetaju')
+        navigate('romaka')
         // navegar o mostrar siguiente paso
         } else {
         form.setError("respuesta", {
@@ -113,4 +113,4 @@ const Principio = () => {
     )
 }
 
-export default Principio
+export default Veintiocho

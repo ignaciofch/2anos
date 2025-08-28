@@ -5,7 +5,7 @@ import { ChevronRight, LinkIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const illustratedButtonVariants = cva(
-  "group relative overflow-hidden inline-flex items-center justify-start w-full p-6 rounded-2xl border transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary",
+  "group cursor-pointer relative overflow-hidden inline-flex items-center justify-start w-full p-6 rounded-2xl border transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary",
   {
     variants: {
       variant: {
@@ -14,6 +14,7 @@ const illustratedButtonVariants = cva(
         ghost: "border-transparent bg-transparent hover:bg-gray-100",
         primary: "bg-primary border-primary text-white hover:bg-primary/90",
         secondary: "bg-secondary border-secondary text-secondary-foreground hover:bg-secondary/80",
+        disabled: "bg-gray-200 border-gray-200 text-gray-400 cursor-not-allowed hover:shadow-none",
       },
       size: {
         sm: "p-4 rounded-xl",
@@ -81,6 +82,8 @@ const IllustratedButton = React.forwardRef(
       illustrationSize = "default",
       illustrationClassName,
       iconClassName,
+      children,
+      disabled,
       ...props
     },
     ref,
@@ -90,7 +93,7 @@ const IllustratedButton = React.forwardRef(
 
     return (
       <Comp className={cn(illustratedButtonVariants({ variant, size }), className)} ref={ref} {...props}>
-        <div className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-center z-10" />
+        {!disabled && <div className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-center z-10" />}
 
         <div className="relative flex items-center w-full z-20">
           {/* Illustration */}
@@ -142,10 +145,10 @@ const IllustratedButton = React.forwardRef(
                   "text-base font-bold md:text-lg lg:text-2xl leading-tight truncate transition-colors duration-500",
                   variant === "default" || variant === "outline" || variant === "ghost"
                     ? "text-primary group-hover:text-primary"
-                    : "text-white group-hover:text-primary",
+                    : variant === "disabled" ? "text-white" : "text-white group-hover:text-primary",
                 )}
               >
-                {title}
+                {children || title}
               </h3>
               {badge && (
                 <span
@@ -178,7 +181,7 @@ const IllustratedButton = React.forwardRef(
             <div className="flex-shrink-0 ml-4">
               <div
                 className={cn(
-                  "flex items-center justify-center w-8 h-8 rounded-full transition-all duration-500 group-hover:scale-110",
+                  "flex items-center justify-center w-8 h-8 rounded-full transition-all duration-500 ",
                   variant === "default" || variant === "outline" || variant === "ghost"
                     ? "bg-gray-100 group-hover:bg-gray-200"
                     : "bg-white/20 group-hover:bg-gray-200",

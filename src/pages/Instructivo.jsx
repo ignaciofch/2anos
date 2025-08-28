@@ -31,7 +31,7 @@ function Instructivo() {
                     <Button variant="outline"> ❌ Me rindo</Button>
                 </CardAction>
             </CardHeader>
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-4">
                 <p>
                 Para ganar solo tenés que responder correctamente algunas preguntas.
                 </p>
@@ -42,10 +42,10 @@ function Instructivo() {
                 Cada vez que respondas bien una, vas a obtener una <strong>ubicación</strong> donde vas a encontrar algo para vos.
                 </p>
 
-                <h3 className="font-semibold mt-4">📌 ¿Cómo responder?</h3>
-                <ol className="list-decimal list-inside space-y-2">
+                <h3 className="font-semibold text-xl mt-4">📌 ¿Cómo responder?</h3>
+                <ol className="border-2 rounded-4xl p-6 list-decimal list-inside space-y-2">
                 <li>
-                    Elegí la pregunta según la categoría que prefieras.
+                    Elegí la pregunta según la categoría que prefieras. <strong className="border rounded-4xl text-primary text-sm p-2 bg-primary/10">⌚ ¡UNA VEZ QUE ELIJAS UNA, NO VAS A PODER VOLVER A RESPONDERLA POR 30 MINUTOS!</strong>
                 </li>
                 <li>
                     <strong>Primera ronda:</strong> respondés sin opciones.  

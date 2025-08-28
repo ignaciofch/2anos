@@ -28,10 +28,10 @@ import { useLocation, useNavigate } from "react-router"
 import { normalize } from "@/utils/normalizacion"
 import { formSchema } from "@/utils/schemas"
 
-const respuestasValidasRaw = ["sanguche", "milanesa", "sandwich"]
+const respuestasValidasRaw = ["vino", "pomelo","tinto"]
 const respuestasValidas = respuestasValidasRaw.map(normalize)
 
-const OpcionesPrincipio = () => {
+const OpcionesVeintiocho = () => {
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -56,7 +56,7 @@ const OpcionesPrincipio = () => {
         
                 if (esValida) {
                 console.log("✅ Respuesta correcta")
-                navigate('/LNrU9WiOl25DbKRnshYq3Mlpx/zetaju')
+                navigate('/NrX7aZja1g1yDqZisUCX8x5Bq/romaka')
                 // navegar o mostrar siguiente paso
                 } else {
                 form.setError("respuesta", {
@@ -115,4 +115,4 @@ const OpcionesPrincipio = () => {
     )
 }
 
-export default OpcionesPrincipio
+export default OpcionesVeintiocho

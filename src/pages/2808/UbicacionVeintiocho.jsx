@@ -12,28 +12,26 @@ import { IllustratedButton } from '@/components/ui/illustrated_button'
 import { useNavigate } from 'react-router'
 import { Button } from '@/components/ui/button'
 
-const UbicacionPrincipio = () => {
+const UbicacionVeintiocho = () => {
     const navigate = useNavigate()
 
     return (
     <main className="flex justify-center">
         <Card>
             <CardHeader>
-                <CardTitle>Muy bien!</CardTitle>
-                <CardAction>
-                    <Button variant="outline"> ❌ Me rindo</Button>
-                </CardAction>
+                <CardTitle className='text-center'>Muy bien!</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-                <CardDescription className='text-muted-foreground'>Te quedaste con unas ganas esa noche antes de ir al campamento de verano</CardDescription>
+                    <section className="border rounded-4xl text-primary text-sm p-3 bg-primary/10 font-semibold">⌚ ¡SACA UNA CAPTURA O ANOTÁ PORQUE UNA VEZ QUE SALIS DE ACÁ YA NO VAS A PODER VOLER POR 25 MINUTOS!</section>
+                <CardDescription className='text-muted-foreground'>Pocos tienen primer sexo antes que primer beso</CardDescription>
                 <p>
-                LO QUE BUSCAS ESTÁ EN EL BAÑO.
+                LO QUE BUSCAS ESTÁ ATRAS DEL FLORERO.
                 </p>
                 <p>
-                ¿Con que te secas?
+                ¿Sabes cual es el florero?
                 </p>
                 <p>
-                ¿YA TE FIJASTE ARRIBA?
+                Si te paras enfrente quizas miras dos
                 </p>
 
                 <IllustratedButton variant='primary' size="sm" title="Responder otra pregunta" onClick={() => navigate('/categorias')} />
@@ -45,4 +43,4 @@ const UbicacionPrincipio = () => {
   )
 }
 
-export default UbicacionPrincipio
+export default UbicacionVeintiocho

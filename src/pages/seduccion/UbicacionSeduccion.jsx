@@ -12,7 +12,7 @@ import { IllustratedButton } from '@/components/ui/illustrated_button'
 import { useNavigate } from 'react-router'
 import { Button } from '@/components/ui/button'
 
-const UbicacionPrincipio = () => {
+const UbicacionSeduccion = () => {
     const navigate = useNavigate()
 
     return (
@@ -23,17 +23,17 @@ const UbicacionPrincipio = () => {
             </CardHeader>
             <CardContent className="space-y-6">
                     <section className="border rounded-4xl text-primary text-sm p-3 bg-primary/10 font-semibold">⌚ ¡SACA UNA CAPTURA O ANOTÁ PORQUE UNA VEZ QUE SALIS DE ACÁ YA NO VAS A PODER VOLER POR 25 MINUTOS!</section>
-                <CardDescription className='text-muted-foreground'>Te quedaste con unas ganas esa noche antes de ir al campamento de verano</CardDescription>
+                <CardDescription className='text-muted-foreground'>No te acordabas del 28 de enero? esa fue mi primer bala, habías dejado tu ropa en casa pero nunca pasaste a buscarla</CardDescription>
                 <p>
-                LO QUE BUSCAS ESTÁ EN EL BAÑO.
+                LO QUE BUSCAS ESTÁ ATRÁS DE LOS JABONES LÍQUIDOS.
                 </p>
                 <p>
-                ¿Con que te secas?
+                ¿Sabes donde los guardamos? Sí, allá arriba
                 </p>
                 <p>
-                ¿YA TE FIJASTE ARRIBA?
+                Podes preguntarle a mi vieja si no te acordás.
                 </p>
-
+        
                 <IllustratedButton variant='primary' size="sm" title="Responder otra pregunta" onClick={() => navigate('/categorias')} />
             </CardContent>
             <CardFooter>
@@ -43,4 +43,4 @@ const UbicacionPrincipio = () => {
   )
 }
 
-export default UbicacionPrincipio
+export default UbicacionSeduccion

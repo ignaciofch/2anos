@@ -10,6 +10,15 @@ import UbicacionPrincipio from './pages/principio/UbicacionPrincipio'
 import Veintiocho from './pages/2808/Veintiocho'
 import OpcionesVeintiocho from './pages/2808/OpcionesVeintiocho'
 import UbicacionVeintiocho from './pages/2808/UbicacionVeintiocho'
+import Seduccion from './pages/seduccion/Seduccion'
+import OpcionesSeduccion from './pages/seduccion/OpcionesSeduccion'
+import UbicacionSeduccion from './pages/seduccion/UbicacionSeduccion'
+import Agosto from './pages/agostoveintitres/Agosto'
+import OpcionesAgosto from './pages/agostoveintitres/OpcionesAgosto'
+import UbicacionAgosto from './pages/agostoveintitres/UbicacionAgosto'
+import Cumpleaños from './pages/cumpleaños/Cumpleaños'
+import OpcionesCumpleaños from './pages/cumpleaños/OpcionesCumpleaños'
+import UbicacionCumpleaños from './pages/cumpleaños/UbicacionCumpleaños'
 
 const root = createRoot(document.getElementById('root'))
 
@@ -53,6 +62,57 @@ const mainRouter = createBrowserRouter([
       {
         path: "/NrX7aZja1g1yDqZisUCX8x5Bq/romaka",
         element: <UbicacionVeintiocho />
+      }
+    ]
+  },
+  {
+    path: "/n76oJz7uBmHKN8yxP5SVbGqZ9",
+    children: [
+      {
+        index: true,
+        element: <Seduccion />
+      },
+      {
+        path: "/n76oJz7uBmHKN8yxP5SVbGqZ9/opciones",
+        element: <OpcionesSeduccion />
+      },
+      {
+        path: "/n76oJz7uBmHKN8yxP5SVbGqZ9/ponuse",
+        element: <UbicacionSeduccion />
+      }
+    ]
+  },
+  {
+    path: "/p7NBMyDeDeFgumSdcwahL0Ex2",
+    children: [
+      {
+        index: true,
+        element: <Agosto />
+      },
+      {
+        path: "/p7NBMyDeDeFgumSdcwahL0Ex2/opciones",
+        element: <OpcionesAgosto />
+      },
+      {
+        path: "/p7NBMyDeDeFgumSdcwahL0Ex2/jejugi",
+        element: <UbicacionAgosto />
+      }
+    ]
+  },
+  {
+    path: "/TTNPmq6bPklRyPaTok1u3vB8c",
+    children: [
+      {
+        index: true,
+        element: <Cumpleaños />
+      },
+      {
+        path: "/TTNPmq6bPklRyPaTok1u3vB8c/opciones",
+        element: <OpcionesCumpleaños />
+      },
+      {
+        path: "/TTNPmq6bPklRyPaTok1u3vB8c/posuxi",
+        element: <UbicacionCumpleaños />
       }
     ]
   },
